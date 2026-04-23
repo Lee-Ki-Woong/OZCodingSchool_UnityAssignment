@@ -84,8 +84,7 @@ public class PhysicsTest : MonoBehaviour
 
     private Vector3 SetVector()
     {
-        var myVector = new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y,
-            this.gameObject.transform.position.z);
+        var myVector = this.transform.position;
 
         return myVector;
     }

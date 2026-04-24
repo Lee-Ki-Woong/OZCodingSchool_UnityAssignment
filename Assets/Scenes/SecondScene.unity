@@ -240,8 +240,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 193319549}
-  - component: {fileID: 193319550}
   - component: {fileID: 193319551}
+  - component: {fileID: 193319556}
+  - component: {fileID: 193319555}
+  - component: {fileID: 193319557}
+  - component: {fileID: 193319552}
+  - component: {fileID: 193319553}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -263,23 +267,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2021314645}
+  - {fileID: 961739753}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &193319550
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 193319548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a6b82f1f81d7d04192588badc20fa41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Walk
-  myObject: {fileID: 193319548}
-  myTransform: {fileID: 193319549}
-  m_shotRange: 5
 --- !u!54 &193319551
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -307,6 +297,73 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &193319552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193319548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40fa336b6fa48034d80b307397cd4b56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GetShotGun
+  MyTransform: {fileID: 2021314645}
+  m_shotRange: 5
+--- !u!114 &193319553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193319548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc96388db6eae194c8962b608397200c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GetShotGun
+  MyTransform: {fileID: 2021314645}
+  m_shotRange: 3
+--- !u!114 &193319555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193319548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 815f053cb34656845a7a29729c59942f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GetJump
+  MyTransform: {fileID: 2021314645}
+--- !u!114 &193319556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193319548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37fdf6695249bb14f90faa91c78d8f1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GetWalk
+  MyTransform: {fileID: 2021314645}
+--- !u!114 &193319557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193319548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1f04bb62ad49e94190a734135a57cac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GetTurn
+  MyTransform: {fileID: 2021314645}
 --- !u!1 &203844586
 GameObject:
   m_ObjectHideFlags: 0
@@ -1129,12 +1186,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 961739749}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -20, y: 5, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 4, z: -20}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 193319549}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1243593099
 GameObject:
@@ -1629,7 +1686,7 @@ GameObject:
   - component: {fileID: 2021314643}
   - component: {fileID: 2021314642}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: Player Object
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1805,7 +1862,6 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 961739753}
   - {fileID: 203844589}
   - {fileID: 1462780741}
   - {fileID: 193319549}

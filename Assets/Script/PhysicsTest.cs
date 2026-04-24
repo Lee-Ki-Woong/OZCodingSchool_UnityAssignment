@@ -84,7 +84,7 @@ public class PhysicsTest : MonoBehaviour
 
     private Vector3 SetVector()
     {
-        var myVector = this.transform.position;
+        var myVector = this.transform.position + Vector3.down * 4;
 
         return myVector;
     }

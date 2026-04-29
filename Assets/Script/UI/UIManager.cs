@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // [Enum] ========================================
 #region Enum
@@ -127,11 +128,10 @@ public class UIManager : MonoBehaviour
                 GameObject gameObj = Instantiate(loadGameObject);
                 gameObj.transform.SetParent(UIList.transform, false);
                 m_UIDicList.Add(menuType, gameObj);
-                return m_UIDicList[menuType];
             }
         }
 
-        return null;
+        return m_UIDicList[menuType];
     }
 
     private string GetUIDataPath(MenuType menuType)
@@ -147,4 +147,11 @@ public class UIManager : MonoBehaviour
     }
 
     #endregion
+
+    // [Active ] ========================================
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene("GameScene");
+    }
 }

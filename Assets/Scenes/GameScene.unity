@@ -729,7 +729,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
   PlayerMoveSpeed: 5
-  RotateSpeed: 600
+  RotateSpeed: 200
   JumpPoint: 2.5
   JumpCount: 2
 --- !u!136 &892342254
@@ -845,7 +845,7 @@ GameObject:
   - component: {fileID: 1012060397}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

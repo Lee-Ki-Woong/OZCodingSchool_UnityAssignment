@@ -27,7 +27,6 @@ public class BaseExitUI : MonoBehaviour
     // [Button Event] ========================================
     #region [Button Event]
 
-
     protected void OnClickExit()
     {
         UIManager.Instance.CloseLastUI();

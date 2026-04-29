@@ -21,15 +21,54 @@ public class MainOption : BaseExitUI
     {
         base.Start();
 
-        MainOptionSoundBtn = this.transform.Find("Menu/MainOption_SoundBtn").GetComponent<Button>();
-        MainOptionGameOptionBtn = this.transform.Find("Menu/MainOption_GameOptionBtn").GetComponent<Button>();
-        MainOptionLanguageBtn = this.transform.Find("Menu/MainOption_LanguageBtn").GetComponent<Button>();
-        MainOptionETCBtn = this.transform.Find("Menu/MainOption_ETCBtn").GetComponent<Button>();
+        GetMainOptionSoundBtn();
+        GetMainOptionGameOptionBtn();
+        GetMainOptionLanguageBtn();
+        GetMainOptionETCBtn();
+    }
 
-        MainOptionSoundBtn.onClick.AddListener(OnClickSound);
-        MainOptionGameOptionBtn.onClick.AddListener(OnClickGameOption);
-        MainOptionLanguageBtn.onClick.AddListener(OnClickLanguage);
-        MainOptionETCBtn.onClick.AddListener(OnClickETC);
+
+    #endregion
+
+
+    // [Get Button] ========================================
+    #region [Get Button]
+    // [Get Button] ========================================
+
+    private void GetMainOptionSoundBtn()
+    {
+        MainOptionSoundBtn = this.transform.Find("Menu/MainOption_SoundBtn").GetComponent<Button>();
+        if(MainOptionSoundBtn != null)
+        {
+            MainOptionSoundBtn.onClick.AddListener(OnClickSound);
+        }
+    }
+
+    private void GetMainOptionGameOptionBtn()
+    {
+        MainOptionGameOptionBtn = this.transform.Find("Menu/MainOption_GameOptionBtn").GetComponent<Button>();
+        if(MainOptionGameOptionBtn != null)
+        {
+            MainOptionGameOptionBtn.onClick.AddListener(OnClickGameOption);
+        }
+    }
+
+    private void GetMainOptionLanguageBtn()
+    {
+        MainOptionLanguageBtn = this.transform.Find("Menu/MainOption_LanguageBtn").GetComponent<Button>();
+        if(MainOptionLanguageBtn != null)
+        {
+            MainOptionLanguageBtn.onClick.AddListener(OnClickLanguage);
+        }
+    }
+
+    private void GetMainOptionETCBtn()
+    {
+        MainOptionETCBtn = this.transform.Find("Menu/MainOption_ETCBtn").GetComponent<Button>();
+        if(MainOptionETCBtn != null)
+        {
+            MainOptionETCBtn.onClick.AddListener(OnClickETC);
+        }
     }
 
     #endregion
@@ -59,4 +98,5 @@ public class MainOption : BaseExitUI
     }
 
     #endregion
+
 }

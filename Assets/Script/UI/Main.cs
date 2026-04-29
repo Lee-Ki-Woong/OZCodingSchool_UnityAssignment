@@ -19,15 +19,52 @@ public class Main : MonoBehaviour
 
     private void Start()
     {
-        MainStart = this.transform.Find("Menu/MainStartBtn").GetComponent<Button>();
-        MainCollection = this.transform.Find("Menu/MainCollectionBtn").GetComponent<Button>();
-        MainOption = this.transform.Find("Menu/MainOptionBtn").GetComponent<Button>();
-        MainExit = this.transform.Find("Menu/MainExitBtn").GetComponent<Button>();
+        GetMainStartBtn();
+        GetMainCollectionBtn();
+        GetMainOptionBtn();
+        GetMainExitBtn();
+    }
 
-        MainStart.onClick.AddListener(OnClickMainStart);
-        MainCollection.onClick.AddListener(OnClickMainCollection);
-        MainOption.onClick.AddListener(OnClickMainOption);
-        MainExit.onClick.AddListener(OnClickMainExit);
+    #endregion
+
+
+    // [Get Button] ========================================
+    #region [Get Button]
+
+    public void GetMainStartBtn()
+    {
+        MainStart = this.transform.Find("Menu/MainStartBtn").GetComponent<Button>();
+        if (MainStart != null)
+        {
+            MainStart.onClick.AddListener(OnClickMainStart);
+        }
+    }
+
+    public void GetMainCollectionBtn()
+    {
+        MainCollection = this.transform.Find("Menu/MainCollectionBtn").GetComponent<Button>();
+        if (MainCollection != null)
+        {
+            MainCollection.onClick.AddListener(OnClickMainCollection);
+        }
+    }
+
+    public void GetMainOptionBtn()
+    {
+        MainOption = this.transform.Find("Menu/MainOptionBtn").GetComponent<Button>();
+        if (MainOption != null)
+        {
+            MainOption.onClick.AddListener(OnClickMainOption);
+        }
+    }
+
+    public void GetMainExitBtn()
+    {
+        MainExit = this.transform.Find("Menu/MainExitBtn").GetComponent<Button>();
+        if (MainExit != null)
+        {
+            MainExit.onClick.AddListener(OnClickMainExit);
+        }
     }
 
     #endregion
@@ -38,7 +75,7 @@ public class Main : MonoBehaviour
 
     private void OnClickMainStart()
     {
-        UIManager.Instance.OpenUI(MenuType.MainStart);
+        UIManager.Instance.StartGame();
     }
 
     private void OnClickMainCollection()
